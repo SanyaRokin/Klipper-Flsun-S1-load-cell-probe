@@ -120,13 +120,9 @@ config WANT_ADS1220
     bool
     depends on HAVE_GPIO_SPI
     default y
-config WANT_LDC1612
+config WANT_LOAD_CELL_ENDSTOP
     bool
-    depends on HAVE_GPIO_I2C
-    default y
-config WANT_SENSOR_ANGLE
-    bool
-    depends on HAVE_GPIO_SPI
+    depends on WANT_HX71X || WANT_ADS1220
     default y
 config WANT_SOFTWARE_I2C
     bool
